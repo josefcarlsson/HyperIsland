@@ -21,6 +21,8 @@ main{
  max-width: 800px;
  margin: auto;
  padding-top: 50px;
+ padding-left: 10px;
+ padding-right: 10px;
  padding-bottom: 50px;
 }
 
@@ -30,6 +32,11 @@ h1 {
   font-weight: normal;
   margin-top: 30px;
 }
+
+img{
+  width: 100%;
+}
+
 p{
   line-height: 2em;
 }
