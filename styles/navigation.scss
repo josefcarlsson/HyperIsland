@@ -1,0 +1,35 @@
+
+
+
+.top-bar{
+ padding: $padding;
+ background-color: $color;
+ position: relative;
+
+ &--orange{
+  background-color: orange;
+ }
+ 
+ img{
+  height: 30px;
+  width: auto;
+ }
+
+
+ div{
+  position: absolute;
+  top: 50%;
+  right: $padding;
+  transform: translateY(-50%);
+ }
+
+ &__link{
+   font-weight: bold;
+   margin-left: 5px;
+   color: #fff;
+   
+   &--active{
+    border-bottom: 2px solid #fff;
+   } 
+ }
+}

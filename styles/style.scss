@@ -1,51 +1,7 @@
-.top-bar {
-  padding: 10px;
-  background-color: #444;
-  position: relative;
-}
-.top-bar--orange {
-  background-color: orange;
-}
-.top-bar img {
-  height: 30px;
-  width: auto;
-}
-.top-bar div {
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
-}
-.top-bar__link {
-  font-weight: bold;
-  margin-left: 5px;
-  color: #fff;
-}
-.top-bar__link--active {
-  border-bottom: 2px solid #fff;
-}
 
-.card-wrapper {
-  width: 1000px;
-  margin: auto;
-  font-size: 0;
-  padding: 0;
-}
-.card-wrapper__card {
-  width: 230px;
-  margin: 10px;
-  display: inline-block;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  font-size: 16px;
-}
-.card-wrapper__card img {
-  width: 100%;
-}
-.card-wrapper__content {
-  padding: 10px;
-}
+@import "variables.scss";
+@import "navigation.scss";
+@import "cards.scss";
 
 /* Applies to the entire body of the HTML document (except where overridden by more specific
 selectors). */
@@ -79,21 +35,19 @@ body.active p {
 }
 
 main {
+
   padding-top: 50px;
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 50px;
 }
-
-.max-width {
+.max-width{
   max-width: 1000px;
   margin: auto;
 }
-
-.text-align-center {
+.text-align-center{
   text-align: center;
 }
-
 /* Applies to all <h1>...</h1> elements. */
 h1 {
   font-size: 35px;
@@ -114,6 +68,6 @@ p {
   color: white;
 }
 
-/*# sourceMappingURL=style.css.map */
+
 
 /*# sourceMappingURL=style.css.map */
