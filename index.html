@@ -3,17 +3,29 @@
  <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="./styles/style.css">
+  <script src="./scripts/script.js"></script>
  </head>
- <body>
-  <nav>
-   <a href="./index.html">Hem</a>
+ <body class="toggle-me" onload="getPosts()">
+  <nav class="top-bar top-bar--orange">
+   <img src="https://source.unsplash.com/random/100x30" alt="A random image" />
+   <div>
+    <a href="./index.html" class="top-bar__link">Link</a>
+    <a href="./index.html" class="top-bar__link">Link</a>
+    <a href="./index.html" class="top-bar__link">Link</a>    
+    <a href="./index.html" class="top-bar__link top-bar__link--active">Link</a>
+   </div>
   </nav>
   <main>
-   <h1>Lorem ipsum</h1>
-   <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in erat dolor. Nullam id enim et lectus commodo venenatis in nec eros. In hac habitasse platea dictumst. Curabitur bibendum elit eu tellus egestas fringilla. Quisque vestibulum lorem sed risus feugiat, vel venenatis tortor imperdiet. Ut tincidunt maximus vehicula. Sed imperdiet libero ac elit consectetur dignissim. Fusce elementum porttitor libero. Quisque dui leo, efficitur ac lacus ac, ultrices consectetur dolor.
-   </p>
-   <a href="./pages/post.html">To post</a>
+
+    <h1 class="text-align-center">Lorem ipsum</h1>
+    <ul class="card-wrapper" id="postsSummaries">
+    </ul>
+    <section class="max-width">
+     <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in erat dolor. Nullam id enim et lectus commodo venenatis in nec eros. In hac habitasse platea dictumst. Curabitur bibendum elit eu tellus egestas fringilla. Quisque vestibulum lorem sed risus feugiat, vel venenatis tortor imperdiet. Ut tincidunt maximus vehicula. Sed imperdiet libero ac elit consectetur dignissim. Fusce elementum porttitor libero. Quisque dui leo, efficitur ac lacus ac, ultrices consectetur dolor.
+     </p>
+     <a href="./pages/post.html">To post</a>
+    </section>
   </main>
  </body>
 </html>

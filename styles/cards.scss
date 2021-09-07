@@ -1,0 +1,52 @@
+
+
+
+.card-wrapper{
+  max-width: 1000px;
+  width: 100%;
+  margin:auto;
+  font-size: 0;
+  padding: 0;
+
+  &__card{
+    width: calc(25% - 20px);
+    margin: 10px;
+    display: inline-block;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    font-size: 16px;
+
+    @media screen and (max-width: 1000px) {
+      width: calc(50% - 20px);
+    }
+
+    @media screen and (max-width: 481px) {
+      width: 100%;
+      margin: 0;
+    }
+    a{
+      text-decoration: none;
+      color: #000;
+    }
+    img{
+        width: 100%;
+    }
+  }
+
+  &__content{
+    padding: 10px;
+  }
+
+}
+
+h1 {
+  font-size: 35px;
+  font-weight: normal;
+  margin-top: 30px;
+
+  @media screen and (max-width: 1079px) {
+    font-size: 400px;
+    margin-top: 15px;
+  }
+}

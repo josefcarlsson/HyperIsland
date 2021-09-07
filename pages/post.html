@@ -5,19 +5,14 @@
  <link rel="stylesheet" href="../styles/style.css">
  <script src="../scripts/script.js"></script>
 </head>
-<body>
+<body class="toggle-me" onload="getPostFromId()" >
  <nav>
-  <a href="../index.html">Hem</a>
+  <a href="../index.html">Start</a>
  </nav>
- <main>
-  <img src="https://source.unsplash.com/random/800x600" alt="A random image" />
-  <h1>My First Heading</h1>
-  <p>
-   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in erat dolor. Nullam id enim et lectus commodo venenatis in nec eros. In hac habitasse platea dictumst. Curabitur bibendum elit eu tellus egestas fringilla. Quisque vestibulum lorem sed risus feugiat, vel venenatis tortor imperdiet. Ut tincidunt maximus vehicula. Sed imperdiet libero ac elit consectetur dignissim. Fusce elementum porttitor libero. Quisque dui leo, efficitur ac lacus ac, ultrices consectetur dolor.
-  </p>
-  <button class="toggle-me" onclick="toggleState()">
-   Click me to change style
-  </button>
+ <main >
+  <h1 id="postTitle">My First Heading</h1>
+  <div id="postContent"></div>
  </main>
+ <button onclick="getDrink()">Give me a drink instead</button>
 </body>
 </html>
