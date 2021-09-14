@@ -1,3 +1,6 @@
+
+@import "variables.scss";
+
 /* Applies to the entire body of the HTML document (except where overridden by more specific
 selectors). */
 body, html {
@@ -7,13 +10,13 @@ body, html {
 }
 
 body {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: $bodyfont;
   font-size: 18px;
   line-height: 1.4em;
 }
 
-h1, h2, h3, h4 {
-  font-family: "Poppins", sans-serif;
+h1, h2, h3, h4 { 
+  font-family: $headerfont;
   margin-top: 30px;
 }
 
@@ -21,6 +24,5 @@ img {
   width: 100%;
 }
 
-/*# sourceMappingURL=style.css.map */
 
 /*# sourceMappingURL=style.css.map */
