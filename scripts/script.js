@@ -1,3 +1,11 @@
+let posts = []
+var number = 0;
+
+function addToNumber() {
+  number = number + 1;
+  console.log(number);
+}
+
 function toggleState() {
   document.querySelector(".toggle-me").classList.toggle("active");
 };
@@ -12,6 +20,7 @@ function populatePost(post) {
 }
 
 function findQuery(param) {
+  console.log(param);
   var urlParams = new URLSearchParams(window.location.search);
   return urlParams.get(param);
 }
@@ -32,9 +41,12 @@ function createPreviewCard(card) {
 
 
 function getPosts() {
+  createFilter()
   fetch("../data/posts.json")
     .then((response) => response.json())
     .then((data) => {
+
+      posts = data;
       for (let i = 0; i < data.length; i++) {
         createPreviewCard(data[i])
       }
@@ -42,54 +54,65 @@ function getPosts() {
 }
 
 function getPostFromId() {
+
   var id = JSON.parse(findQuery('id'));
+  console.log("id", findQuery("id"));
 
   fetch("../data/posts.json")
     .then((response) => response.json())
     .then((data) => {
+      console.log('data', data)
       for (let i = 0; i < data.length; i++) {
+        console.log('from query', id, 'in loop:', data[i].id, "same", data[i].id === id);
         if (data[i].id === id) {
+          console.log(data[i]);
           populatePost(data[i]);
         }
       }
     });
 }
+/* 
+  get id
+  populate html with post content
+*/
 
-function getDrink() {
-  fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php")
-    .then((response) => response.json())
-    .then((data) => {
-      var drink = data.drinks[0];
-      var maxNumberOfIngredient = 15;
-      var post = {
-        title: drink.strDrink,
-        content: [
-          "<img src=" + drink.strDrinkThumb + " />",
-          "<p>" + drink.strInstructions + "</p>",
-          "<h3>Ingredients</h3>",
-        ],
-      };
+//  ! create the button for each letter
+function createFilter() {
+  var filterItems = ['ALL','a', 'b', 'c', 'd', 'e', 'f','g', 'H', 'j', 'k', 'l', 'm']
+  
+  for (let i = 0; i < filterItems.length; i++) {
+    createFilterButton(filterItems[i]);
+  }
 
-      for (let i = 0; i < maxNumberOfIngredient; i++) {
-        if (i === 0) {
-          post.content.push("<ul>");
-        }
+}
+//  ! create the button for each letter
+function createFilterButton(filterItem) {
+  // ! onclick send letter to function
+  document.getElementById("filter").innerHTML += `
+    <li>
+      <button onclick="filterPosts('${filterItem}')"> 
+        ${filterItem}
+      </button>
+    </li>`;
+}
 
-        if (drink[`strIngredient${i}`]) {
-          post.content.push(
-            "<li>" +
-              drink[`strIngredient${i}`] +
-              " : " +
-              drink[`strMeasure${i}`] +
-              "</li>"
-          );
-        }
-        if (i === maxNumberOfIngredient - 1) {
-          post.content.push("</ul>");
-        }
-      }
 
-      document.getElementById("postContent").innerHTML = "";
-      populatePost(post);
-    });
+//! loop all post  compare title with first letter with the letter we send in
+function filterPosts(filter) {
+
+  document.getElementById("postsSummaries").innerHTML = '';
+  var found = false;
+
+  for (let i = 0; i < posts.length; i++) {
+    console.log(post[i])
+    if (posts[i].title.charAt(0).toLowerCase() == filter.toLowerCase() || filter === 'ALL') {
+      //! if its same replace the content of wrapper
+      createPreviewCard(posts[i]);
+      found = true
+    } 
+  }
+
+  if (!found) {
+    document.getElementById("postsSummaries").innerHTML = "<h1>Not found</h1>";
+  }
 }
