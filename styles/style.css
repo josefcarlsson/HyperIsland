@@ -7,13 +7,13 @@ body, html {
 }
 
 body {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: freight-sans-pro, sans-serif;
   font-size: 18px;
   line-height: 1.4em;
+  background: linear-gradient(to bottom, #303846, #5f6673);
 }
 
 h1, h2, h3, h4 {
-  font-family: "Poppins", sans-serif;
   margin-top: 30px;
 }
 
