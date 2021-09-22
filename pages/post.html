@@ -6,9 +6,15 @@
  <script src="../scripts/script.js"></script>
 </head>
 <body class="toggle-me" onload="getPostFromId()" >
- <nav>
-  <a href="../index.html">Start</a>
- </nav>
+  <nav class="top-bar top-bar--orange">
+   <img src="https://source.unsplash.com/random/100x30" alt="A random image" />
+   <div>
+    <a href="./index.html" class="top-bar__link">Link</a>
+    <a href="./index.html" class="top-bar__link">Link</a>
+    <a href="./index.html" class="top-bar__link">Link</a>    
+    <a href="./index.html" class="top-bar__link top-bar__link--active">Link</a>
+   </div>
+  </nav>
  <main >
   <h1 id="postTitle">My First Heading</h1>
   <div id="postContent"></div>

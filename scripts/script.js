@@ -12,15 +12,10 @@ function toggleState() {
 
 function populatePost(post) {
   document.getElementById('postTitle').innerHTML = post.title;
-  var content = post.content;
-
-  for (let i = 0; i < content.length; i++) {
-    document.getElementById("postContent").innerHTML += content[i];
-  }
+  document.getElementById("postContent").innerHTML = post.content;
 }
 
 function findQuery(param) {
-  console.log(param);
   var urlParams = new URLSearchParams(window.location.search);
   return urlParams.get(param);
 }
@@ -39,36 +34,40 @@ function createPreviewCard(card) {
      </li>`;
 };
 
+function formatPost(post) {
+
+  let formated = {
+    title: post.title.rendered,
+    id: post.id,
+    shortSummary: post.excerpt.rendered,
+    previewImage: post._embedded["wp:featuredmedia"][0].source_url,
+    content: post.content.rendered,
+  };
+
+  return formated;
+}
 
 function getPosts() {
   createFilter()
-  fetch("../data/posts.json")
+  fetch("http://localhost:8888/wp-json/wp/v2/posts?_embed")
     .then((response) => response.json())
     .then((data) => {
-
-      posts = data;
       for (let i = 0; i < data.length; i++) {
-        createPreviewCard(data[i])
+        let formatedPost = formatPost(data[i]);
+        posts.push(formatedPost);
+        createPreviewCard(formatedPost);
       }
     });
 }
 
 function getPostFromId() {
+  var id = JSON.parse(findQuery("id"));
 
-  var id = JSON.parse(findQuery('id'));
-  console.log("id", findQuery("id"));
 
-  fetch("../data/posts.json")
+  fetch(`http://localhost:8888/wp-json/wp/v2/posts/${id}?_embed`)
     .then((response) => response.json())
     .then((data) => {
-      console.log('data', data)
-      for (let i = 0; i < data.length; i++) {
-        console.log('from query', id, 'in loop:', data[i].id, "same", data[i].id === id);
-        if (data[i].id === id) {
-          console.log(data[i]);
-          populatePost(data[i]);
-        }
-      }
+      populatePost(formatPost(data));
     });
 }
 /* 
@@ -78,7 +77,7 @@ function getPostFromId() {
 
 //  ! create the button for each letter
 function createFilter() {
-  var filterItems = ['ALL','a', 'b', 'c', 'd', 'e', 'f','g', 'H', 'j', 'k', 'l', 'm']
+  var filterItems = ['ALL','a', 'b', 'c', 'd', 'e', 'f','g', 'h','i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r','s', 't','u','v','w','x','y', 'z']
   
   for (let i = 0; i < filterItems.length; i++) {
     createFilterButton(filterItems[i]);
@@ -102,9 +101,9 @@ function filterPosts(filter) {
 
   document.getElementById("postsSummaries").innerHTML = '';
   var found = false;
-
+  console.log('posts', posts)
   for (let i = 0; i < posts.length; i++) {
-    console.log(post[i])
+
     if (posts[i].title.charAt(0).toLowerCase() == filter.toLowerCase() || filter === 'ALL') {
       //! if its same replace the content of wrapper
       createPreviewCard(posts[i]);

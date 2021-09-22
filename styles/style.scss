@@ -1,8 +1,89 @@
+.top-bar {
+  padding: 10px;
+  background-color: #444;
+  position: relative;
+}
 
-@import "variables.scss";
-@import "navigation.scss";
-@import "cards.scss";
+.top-bar--orange {
+  background-color: orange;
+}
 
+.top-bar img {
+  height: 30px;
+  width: auto;
+}
+
+.top-bar div {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+.top-bar__link {
+  font-weight: bold;
+  margin-left: 5px;
+  color: #fff;
+}
+
+.top-bar__link--active {
+  border-bottom: 2px solid #fff;
+}
+
+.card-wrapper {
+  max-width: 1000px;
+  width: 100%;
+  margin: auto;
+  font-size: 0;
+  padding: 0;
+}
+
+.card-wrapper__card {
+  width: calc(25% - 20px);
+  margin: 10px;
+  display: inline-block;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 1000px) {
+  .card-wrapper__card {
+    width: calc(50% - 20px);
+  }
+}
+@media screen and (max-width: 481px) {
+  .card-wrapper__card {
+    width: 100%;
+    margin: 0;
+  }
+}
+.card-wrapper__card a {
+  text-decoration: none;
+  color: #000;
+}
+
+.card-wrapper__card img {
+  width: 100%;
+}
+
+.card-wrapper__content {
+  padding: 10px;
+}
+
+h1 {
+  font-size: 35px;
+  font-weight: normal;
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 1079px) {
+  h1 {
+    font-size: 400px;
+    margin-top: 15px;
+  }
+}
 /* Applies to the entire body of the HTML document (except where overridden by more specific
 selectors). */
 body, html {
@@ -35,19 +116,21 @@ body.active p {
 }
 
 main {
-
   padding-top: 50px;
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 50px;
 }
-.max-width{
+
+.max-width {
   max-width: 1000px;
   margin: auto;
 }
-.text-align-center{
+
+.text-align-center {
   text-align: center;
 }
+
 /* Applies to all <h1>...</h1> elements. */
 h1 {
   font-size: 35px;
@@ -67,7 +150,14 @@ p {
 .active {
   color: white;
 }
-
-
-
+ol{
+  display: flex;
+  width: 100%;
+  padding: 0;
+  list-style: none;
+  justify-content: space-between;
+}
 /*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */
+
+/*# sourceMappingURL=style.scss.map */

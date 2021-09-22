@@ -3,24 +3,29 @@
   background-color: #444;
   position: relative;
 }
+
 .top-bar--orange {
   background-color: orange;
 }
+
 .top-bar img {
   height: 30px;
   width: auto;
 }
+
 .top-bar div {
   position: absolute;
   top: 50%;
   right: 10px;
   transform: translateY(-50%);
 }
+
 .top-bar__link {
   font-weight: bold;
   margin-left: 5px;
   color: #fff;
 }
+
 .top-bar__link--active {
   border-bottom: 2px solid #fff;
 }
@@ -32,6 +37,7 @@
   font-size: 0;
   padding: 0;
 }
+
 .card-wrapper__card {
   width: calc(25% - 20px);
   margin: 10px;
@@ -41,6 +47,7 @@
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   font-size: 16px;
 }
+
 @media screen and (max-width: 1000px) {
   .card-wrapper__card {
     width: calc(50% - 20px);
@@ -56,9 +63,11 @@
   text-decoration: none;
   color: #000;
 }
+
 .card-wrapper__card img {
   width: 100%;
 }
+
 .card-wrapper__content {
   padding: 10px;
 }
@@ -68,13 +77,13 @@ h1 {
   font-weight: normal;
   margin-top: 30px;
 }
+
 @media screen and (max-width: 1079px) {
   h1 {
     font-size: 400px;
     margin-top: 15px;
   }
 }
-
 /* Applies to the entire body of the HTML document (except where overridden by more specific
 selectors). */
 body, html {
@@ -142,6 +151,16 @@ p {
   color: white;
 }
 
+ol {
+  display: flex;
+  width: 100%;
+  padding: 0;
+  list-style: none;
+  justify-content: space-between;
+}
+
 /*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.scss.map */
 
 /*# sourceMappingURL=style.css.map */
