@@ -1,29 +1,143 @@
+.card-wrapper {
+  max-width: 1000px;
+  width: 100%;
+  margin: auto;
+  font-size: 0;
+  padding: 0;
+}
+.card-wrapper__card {
+  width: calc(25% - 20px);
+  margin: 10px;
+  display: inline-block;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  font-size: 16px;
+  opacity: 0;
+  transition: all 500ms;
+  transform: scale(0.7);
+}
+.card-wrapper__card.been-in-view {
+  opacity: 1;
+  transform: scale(1);
+}
+@media screen and (max-width: 1000px) {
+  .card-wrapper__card {
+    width: calc(50% - 20px);
+  }
+}
+@media screen and (max-width: 481px) {
+  .card-wrapper__card {
+    width: 100%;
+    margin: 0;
+  }
+}
+.card-wrapper__card a {
+  text-decoration: none;
+  color: #000;
+}
+.card-wrapper__card img {
+  width: 100%;
+}
+.card-wrapper__content {
+  padding: 10px;
+}
+
+h1 {
+  font-size: 35px;
+  font-weight: normal;
+  margin-top: 30px;
+}
+@media screen and (max-width: 1079px) {
+  h1 {
+    font-size: 400px;
+    margin-top: 15px;
+  }
+}
+
+.top-bar {
+  padding: 10px;
+  background-color: #444;
+  position: relative;
+}
+.top-bar--orange {
+  background-color: orange;
+}
+.top-bar img {
+  height: 30px;
+  width: auto;
+}
+.top-bar div {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+.top-bar__link {
+  font-weight: bold;
+  margin-left: 5px;
+  color: #fff;
+}
+.top-bar__link--active {
+  border-bottom: 2px solid #fff;
+}
+
+h1 {
+  font-size: 35px;
+  font-weight: normal;
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 1079px) {
+  h1 {
+    font-size: 400px;
+    margin-top: 15px;
+  }
+}
 /* Applies to the entire body of the HTML document (except where overridden by more specific
 selectors). */
-
-body,html{
- min-height: 100%;
- height: 100%;
- margin: 0;
+body, html {
+  min-height: 100%;
+  margin: 0;
 }
 
 body {
-  background-color: rgb(240,240,240);
+  background-color: #f0f0f0;
   font-family: arial, sans-serif;
   font-size: 14px;
 }
 
-nav{
- padding: 10px;
+body.active {
+  background-color: black;
 }
 
-main{
- max-width: 800px;
- margin: auto;
- padding-top: 50px;
- padding-left: 10px;
- padding-right: 10px;
- padding-bottom: 50px;
+body.active p {
+  background-color: green;
+  color: red;
+}
+
+.active img {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+main {
+  padding-top: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 50px;
+}
+
+.max-width {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.text-align-center {
+  text-align: center;
 }
 
 /* Applies to all <h1>...</h1> elements. */
@@ -33,15 +147,41 @@ h1 {
   margin-top: 30px;
 }
 
-img{
+img {
   width: 100%;
 }
 
-p{
+p {
   line-height: 2em;
 }
+
 /* Applies to all elements with <... class="active"> specified. */
-.active{
-  background-color: red;
+.active {
   color: white;
 }
+
+ol {
+  display: flex;
+  width: 100%;
+  padding: 0;
+  list-style: none;
+  flex-flow: wrap;
+}
+ol li {
+  margin: 2px;
+}
+ol div {
+  align-self: center;
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+ol div span {
+  padding: 2px;
+}
+
+/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.scss.map */
+
+/*# sourceMappingURL=style.css.map */
