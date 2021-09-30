@@ -1,0 +1,24 @@
+<svg width="610" height="610" viewBox="0 0 610 610" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="magic">
+<rect id="bg" width="610" height="610" fill="white"/>
+<g id="shapes">
+<g id="close">
+<path id="Vector 2" d="M536 86L68 524M68 86L536 524" stroke="#591764" stroke-width="61"/>
+</g>
+<g id="square">
+<path id="Vector" d="M26 556.5V53.5H578V556.5H26Z" fill="#4DDEB2"/>
+</g>
+<g id="hamburger">
+<rect id="Rectangle 1" x="26" y="53" width="552" height="114" fill="#C383F5"/>
+<rect id="Rectangle 3" x="26" y="443" width="552" height="114" fill="#C383F5"/>
+<rect id="Rectangle 2" x="26" y="248" width="552" height="114" fill="#C383F5"/>
+</g>
+<g id="triangle">
+<path id="Vector_2" d="M308 54.5L22.5 556.5H579L308 54.5Z" fill="#7BB6FB"/>
+</g>
+<g id="circle">
+<circle id="Ellipse" cx="305.5" cy="305.5" r="251.5" fill="#FDF99A"/>
+</g>
+</g>
+</g>
+</svg>

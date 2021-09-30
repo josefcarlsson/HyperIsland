@@ -1,3 +1,4 @@
+
 /* Applies to the entire body of the HTML document (except where overridden by more specific
 selectors). */
 body, html {
@@ -7,7 +8,7 @@ body, html {
 
 body {
   background-color: #f0f0f0;
-  font-family: "Happy Monkey", cursive;
+  font-family: 'Happy Monkey', cursive;
   font-size: 14px;
 }
 
@@ -29,14 +30,15 @@ main {
 }
 
 /* Applies to all <h1>...</h1> elements. */
+
 h1 {
   font-size: 8em;
   font-weight: normal;
   margin-top: 30px;
 }
 
-h3 {
-  color: rgba(0, 0, 0, 0.5);
+h3{
+  color: rgba(0,0,0,0.5);
   font-size: 2em;
 }
 
@@ -48,45 +50,48 @@ p {
   line-height: 2em;
 }
 
-button {
-  background-color: rgba(255, 255, 255, 0);
+button{
+  background-color: rgba(255,255,255,0);
   border: none;
 }
 
-.sun {
+.sun{
   animation: spinnSun 5000ms infinite linear;
   transform-origin: center;
-}
-.sun path {
-  stroke-dasharray: 77;
-  stroke-dashoffset: 77;
-  stroke-linecap: round;
-  animation: beamShine 500ms infinite linear alternate;
-}
-.sun path:nth-child(2n) {
-  animation-delay: 200ms;
+  path{
+    stroke-dasharray: 77;
+    stroke-dashoffset: 77;
+    stroke-linecap: round;
+    animation: beamShine 500ms infinite linear alternate;
+    &:nth-child(2n){
+      animation-delay: 200ms;
+    }
+  }
 }
 
 @keyframes spinnSun {
-  0% {
+  0%{
     transform: rotate(0deg);
   }
-  100% {
-    transform: rotate(360deg);
+  100%{
+     transform: rotate(360deg);
   }
 }
+
 @keyframes beamShine {
-  0% {
-    stroke-dashoffset: 77;
-    stroke-width: 4;
+  0%{
+     stroke-dashoffset: 77;
+     stroke-width: 4;
   }
-  100% {
+  100%{
     stroke-dashoffset: 0;
     stroke-width: 24;
   }
 }
-/*# sourceMappingURL=style.css.map */
-/*# sourceMappingURL=style.css.map */
-/*# sourceMappingURL=style.scss.map */
+
+
 
 /*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */
+
+/*# sourceMappingURL=style.scss.map */
