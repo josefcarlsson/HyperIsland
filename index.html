@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html>
  <head>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="./styles/style.css">
- </head>
- <body>
-  <nav>
-   <a href="./index.html">Hem</a>
-  </nav>
-  <main>
-   <h1>Lorem ipsum</h1>
-   <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in erat dolor. Nullam id enim et lectus commodo venenatis in nec eros. In hac habitasse platea dictumst. Curabitur bibendum elit eu tellus egestas fringilla. Quisque vestibulum lorem sed risus feugiat, vel venenatis tortor imperdiet. Ut tincidunt maximus vehicula. Sed imperdiet libero ac elit consectetur dignissim. Fusce elementum porttitor libero. Quisque dui leo, efficitur ac lacus ac, ultrices consectetur dolor.
-   </p>
-   <a href="./pages/post.html">To post</a>
+  <link rel="stylesheet" href="./styles/style.css"></head>
+  <script src="./scripts.js"></script>
+  <body onload="findDates()">
+  <main id="groups">
+   <div>
+   <h1>Current: <span id="current"></span></h1>
+   <h1>Sessionstorage: <span id="session"></span></h1>
+   <h1>Localstorage: <span id="local"></span></h1>
+   <Button onclick="saveDate(this)">Save date!</Button>
+   </div>
   </main>
  </body>
 </html>

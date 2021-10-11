@@ -1,0 +1,61 @@
+@import 'variables.scss', 'fonts.scss';
+
+/* Applies to the entire body of the HTML document (except where overridden by more specific
+selectors). */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: $font-family; 
+  color: $primary-color;
+  font-size: 16px;
+}
+
+body {
+  background-color: #fff;
+  font-size: 14px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+/* Applies to all <h1>...</h1> elements. */
+
+h1 {
+  font-weight: bold;
+  font-size: 2em;
+  span{
+    font-weight: 100;
+  }
+}
+button{
+  background:plum;
+  border: none;
+  padding: 10px;
+  font-size: 1.2em;
+  border-radius: 3px;
+  color: bisque;
+}
+
+img {
+  width: 100%;
+}
+
+p {
+
+}
+
+
+
+
+/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */
+
+/*# sourceMappingURL=style.scss.map */
