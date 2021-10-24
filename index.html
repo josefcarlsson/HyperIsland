@@ -9,8 +9,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap" rel="stylesheet">
  </head>
  <body class="toggle-me" onload="getEmojies()">
+  <header>
+    <form onsubmit="event.preventDefault(); searchForEmoji(this)">
+      <input name="search" type="text" placeholder="Search emoji" id="input" />
+      <button id="search">
+        <img src="./assets/search.png" alt="search" />
+      </button>
+    </form>
+  </header>
   <main class="max-width">
-    <h3 class="text-align-center">I'm feel like this</h3>
+
     <h1 class="text-align-center" id="heading"></h1>
   </main>
   <footer>

@@ -1,21 +1,10 @@
-let emojisArray = [
-  { type: "sad", emoji: "😥", visible: true },
-  { type: "happy", emoji: "😃", visible: false },
-  { type: "sad", emoji: "😥", visible: true },
-  { type: "happy", emoji: "😃", visible: true },
-  { type: "happy", emoji: "😃", visible: false },
-  { type: "zany", emoji: "🤪", visible: false },
-  { type: "sad", emoji: "😥", visible: false },
-  { type: "zany", emoji: "🤪", visible: true },
-  { type: "fear", emoji: "😱", visible: false },
-  { type: "zany", emoji: "🤪", visible: false },
-  { type: "sad", emoji: "😥", visible: true },
-  { type: "fear", emoji: "😱", visible: true },
-  { type: "happy", emoji: "😃", visible: true },
-  { type: "fear", emoji: "😱", visible: true },
-];
+// url : https://emoji-api.com/emojis?access_key=bc60e3c945a9f4122bb298304962837ab7f070e4
 
+function searchForEmoji(evt) {
+ var searchStr = new FormData(evt).get('search')
+
+}
 
 function getEmojies() {
-
+ 
 }
