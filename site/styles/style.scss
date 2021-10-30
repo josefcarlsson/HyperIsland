@@ -1,0 +1,122 @@
+@import 'variables.scss', 'fonts.scss';
+
+/* Applies to the entire body of the HTML document (except where overridden by more specific
+selectors). */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: $font-family; 
+  color: $primary-color;
+  font-size: 16px;
+}
+
+
+body {
+  background-color: #f0f0f0;
+  font-size: 14px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+header{
+  background-color: aquamarine;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  form{
+    position: relative;
+    button{
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      img{
+        height: 100%;
+
+      }
+    }
+  }
+}
+ul{
+  padding: 0;
+  li{
+    display: flex;
+    margin-bottom: 10px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    overflow: hidden;
+    img{
+      flex: 0.3;
+      width: 100%;
+    }
+    div{
+      flex: 0.7;
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      h3{
+        color: black;
+      }
+    }
+  }
+}
+input{
+  border-radius: 5px;
+  border: none;
+  padding: 0.5em;
+  font-size: 1.5em;
+  background-color: rgba(255,255,255,0.6);
+  &:focus{
+    outline: 5px paleturquoise solid;
+  }
+}
+
+button{
+  border-radius: 5px;
+  border: none;
+  padding: 0.5em;
+
+  font-size: 1.5em;
+  background-color: rgba(255,255,255,0);
+}
+
+.max-width {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+/* Applies to all <h1>...</h1> elements. */
+
+h1 {
+  font-size: 8em;
+  font-weight: normal;
+  margin-top: 30px;
+}
+
+h3{
+  color: rgba(0,0,0,0.5);
+  font-size: 2em;
+}
+
+img {
+  width: 100%;
+}
+
+p {
+  line-height: 2em;
+}
+
+
+/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */
+
+/*# sourceMappingURL=style.scss.map */

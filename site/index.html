@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset=“UTF-8”>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap" rel="stylesheet">
+ </head>
+ <body>
+  <header>
+    <form onsubmit="event.preventDefault(); searchForSong(this)">
+      <input name="search" type="text" placeholder="Search song" id="input" />
+      <button id="search">
+        <img src="./assets/search.png" alt="search" />
+      </button>
+    </form>
+  </header>
+  <main class="max-width">
+    <ul id="list"></ul>
+  </main>
+  <footer>
+    <script src="./scripts/script.js"></script>
+  </footer>
+ </body>
+</html>
