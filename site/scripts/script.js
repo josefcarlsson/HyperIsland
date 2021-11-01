@@ -3,7 +3,7 @@
 //CREATE variable listOfEmojies
 
 async function getSongs(search) {
-  var res = await fetch(`./api?search=${search}`);
+  var res = await fetch(`./search?search=${search}`);
   var data = res.json();
   return data;
 }
@@ -28,8 +28,6 @@ async function searchForSong(evt) {
   var data = await getSongs(searchStr);
   var list = document.getElementById('list');
   list.innerHTML = "";
-  
-  for (let i = 0; i < data.length; i++) {
-    list.innerHTML += createListItem(data[i]);
-  }
+  console.log(data)
+  list.innerHTML += data;
 }

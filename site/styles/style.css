@@ -4,24 +4,28 @@
   font-weight: bold;
   font-style: bold;
 }
+
 @font-face {
   font-family: "circular-pro";
   src: url("../assets/fonts/circular-pro-book.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: "larsseit";
   src: url("../assets/fonts/larsseit-bold.woff2") format("woff2");
   font-weight: bold;
   font-style: bold;
 }
+
 @font-face {
   font-family: "larsseit";
   src: url("../assets/fonts/larsseit-italic.woff2") format("woff2");
   font-weight: normal;
   font-style: italic;
 }
+
 /* Applies to the entire body of the HTML document (except where overridden by more specific
 selectors). */
 body, html {
@@ -33,7 +37,7 @@ body, html {
 }
 
 body {
-  background-color: #f0f0f0;
+  background-color: green;
   font-size: 14px;
 }
 
@@ -51,15 +55,18 @@ header {
   justify-content: center;
   align-items: center;
 }
+
 header form {
   position: relative;
 }
+
 header form button {
   position: absolute;
   right: 0;
   top: 0;
   bottom: 0;
 }
+
 header form button img {
   height: 100%;
 }
@@ -67,6 +74,7 @@ header form button img {
 ul {
   padding: 0;
 }
+
 ul li {
   display: flex;
   margin-bottom: 10px;
@@ -74,16 +82,19 @@ ul li {
   border-radius: 5px;
   overflow: hidden;
 }
+
 ul li img {
   flex: 0.3;
   width: 100%;
 }
+
 ul li div {
   flex: 0.7;
   display: flex;
   flex-direction: column;
   padding: 10px;
 }
+
 ul li div h3 {
   color: black;
 }
@@ -95,6 +106,7 @@ input {
   font-size: 1.5em;
   background-color: rgba(255, 255, 255, 0.6);
 }
+
 input:focus {
   outline: 5px paleturquoise solid;
 }
@@ -139,5 +151,3 @@ p {
 /*# sourceMappingURL=style.css.map */
 /*# sourceMappingURL=style.css.map */
 /*# sourceMappingURL=style.scss.map */
-
-/*# sourceMappingURL=style.css.map */

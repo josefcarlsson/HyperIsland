@@ -1,0 +1,27 @@
+{
+  "name": "hyperisland",
+  "version": "1.0.0",
+  "description": "My test project",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josefcarlsson/HyperIsland.git"
+  },
+  "author": "Josef Carlsson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/josefcarlsson/HyperIsland/issues"
+  },
+  "homepage": "https://github.com/josefcarlsson/HyperIsland#readme",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "express": "^4.17.1",
+    "node-sass": "^6.0.1",
+    "node-sass-middleware": "^0.11.0",
+    "nodemon": "^2.0.14"
+  }
+}
