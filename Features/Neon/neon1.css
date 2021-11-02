@@ -1,0 +1,67 @@
+@font-face {
+  font-family: "neon-tubes-2-regular";
+  src:
+    url("https://assets.codepen.io/2585/NeonTubes2.otf") format("woff"),
+    url("https://assets.codepen.io/2585/NeonTubes2.otf") format("opentype"),
+    url("https://assets.codepen.io/2585/NeonTubes2.otf") format("truetype")
+  ;
+}
+
+.neon-red {
+  --neon: hsl(355 100% 95%);
+  --neon-glow: hsl(355 98% 40%);
+}
+
+.neon-blue {
+  --neon: hsl(192 100% 95%);
+  --neon-glow: hsl(194 100% 40%);
+}
+
+h1 > i {
+  color: var(--neon);
+  text-shadow: 
+    0 0 20px var(--neon-glow),
+    0 0 2.5vmin var(--neon-glow),
+    0 0 5vmin var(--neon-glow),
+    0 0 10vmin var(--neon-glow),
+    0 0 15vmin var(--neon-glow);
+}
+
+@media (dynamic-range: high) {
+  .neon-red {
+    --neon-glow: color(display-p3 1 0 0);
+  }
+  
+  .neon-blue {
+    --neon-glow: color(display-p3 0 0.75 1);
+  }
+  
+  h1 > i {
+    text-shadow: 
+      0 0 2.5vmin var(--neon-glow),
+      0 0 10vmin var(--neon-glow),
+      0 0 15vmin var(--neon-glow);
+  }
+}
+
+h1 {
+  text-align: center;
+  font-size: 25vmin;
+  font-weight: normal;
+}
+
+html {
+  block-size: 100%;
+  inline-size: 100%;
+  background-color: hsl(0 0% 5%);
+}
+
+body {
+  min-block-size: 100%;
+  min-inline-size: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  display: grid;
+  place-content: center;
+  font-family: "neon-tubes-2-regular", sans-serif;
+}
