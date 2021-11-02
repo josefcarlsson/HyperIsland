@@ -32,7 +32,6 @@ function findStudentFormKey(key) {
 }
 
 function diplayStudent(student) {
-  console.log("student", student);
  document.getElementById("active-student-information").innerHTML = `
   <div>
    ${student[0].name}
@@ -51,7 +50,6 @@ function diplayStudent(student) {
 function addEventListnerOnkeyboard() {
  window.addEventListener("keydown", function (event) {
   if (event.key !== undefined) {
-   console.log(event.code);
    if (event.code === "Space") {
      window.location.href = "mailto:hello@hyperisland.com?subject=GameConf"
    } else {
