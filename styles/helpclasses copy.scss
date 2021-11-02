@@ -1,0 +1,10 @@
+.keyboard{
+  &__key{
+    width: calc(12 / 100vw);
+    height: calc(12 / 100vw);
+    background-color: red;
+  }
+  &__space{
+
+  }
+}
