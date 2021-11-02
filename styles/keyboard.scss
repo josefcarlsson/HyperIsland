@@ -2,10 +2,21 @@
   display: flex;
   flex-flow: wrap;
   justify-content: center;
+
+  #active-student-information{
+    width: 100%;
+    text-align: center;
+  };
+  
   &__key{
     width: 12vw;
     height: 12vw;
     background-color: red;
+    background-position: center;
+    background-size: cover;
+    &--pressed{
+      border-color: palegreen;
+    }
   }
 
   &__space{

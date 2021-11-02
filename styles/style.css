@@ -55,10 +55,19 @@
   flex-flow: wrap;
   justify-content: center;
 }
+.keyboard #active-student-information {
+  width: 100%;
+  text-align: center;
+}
 .keyboard__key {
   width: 12vw;
   height: 12vw;
   background-color: red;
+  background-position: center;
+  background-size: cover;
+}
+.keyboard__key--pressed {
+  border-color: palegreen;
 }
 .keyboard__space {
   width: 60vw;
