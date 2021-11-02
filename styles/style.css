@@ -22,8 +22,34 @@
   font-weight: normal;
   font-style: italic;
 }
-/* Applies to the entire body of the HTML document (except where overridden by more specific
-selectors). */
+@font-face {
+  font-family: "circular-pro";
+  src: url("../assets/fonts/circular-pro-bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: bold;
+}
+@font-face {
+  font-family: "circular-pro";
+  src: url("../assets/fonts/circular-pro-book.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "larsseit";
+  src: url("../assets/fonts/larsseit-bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: bold;
+}
+@font-face {
+  font-family: "larsseit";
+  src: url("../assets/fonts/larsseit-italic.woff2") format("woff2");
+  font-weight: normal;
+  font-style: italic;
+}
+.text-align-center {
+  text-align: center;
+}
+
 body, html {
   height: 100%;
   margin: 0;
@@ -45,67 +71,9 @@ main {
   flex-direction: column;
 }
 
-.text-align-center {
-  text-align: center;
-}
-
-/* Applies to all <h1>...</h1> elements. */
 h1 {
   font-weight: bold;
   font-size: 2em;
 }
-h1 span {
-  font-weight: 100;
-}
-
-button {
-  background: plum;
-  border: none;
-  padding: 10px;
-  font-size: 1.2em;
-  border-radius: 3px;
-  color: bisque;
-}
-
-input {
-  font-size: 1.2em;
-  border-radius: 3px;
-  padding: 10px;
-  background-color: aquamarine;
-  border: none;
-  flex: 1;
-  margin-right: 10px;
-}
-
-.input-wrapper {
-  width: 100%;
-  max-width: 400px;
-  display: flex;
-}
-
-ul {
-  padding: 0;
-  list-style: none;
-  width: 100%;
-  max-width: 400px;
-  margin-top: 3em;
-}
-ul li {
-  border-bottom: 1px solid #f5f5f5;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
-  padding-bottom: 10px;
-}
-ul li h3 {
-  margin: 0;
-  font-weight: 100;
-  font-size: 1.5em;
-}
-
-/*# sourceMappingURL=style.css.map */
-/*# sourceMappingURL=style.css.map */
-/*# sourceMappingURL=style.scss.map */
 
 /*# sourceMappingURL=style.css.map */

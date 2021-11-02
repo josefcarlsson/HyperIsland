@@ -1,7 +1,5 @@
-@import 'variables.scss', 'fonts.scss';
+@import 'variables.scss', 'fonts.scss', 'helpclasses.scss';
 
-/* Applies to the entire body of the HTML document (except where overridden by more specific
-selectors). */
 body, html {
   height: 100%;
   margin: 0;
@@ -23,67 +21,7 @@ main {
   flex-direction: column;
 }
 
-.text-align-center {
-  text-align: center;
-}
-
-/* Applies to all <h1>...</h1> elements. */
-
 h1 {
   font-weight: bold;
   font-size: 2em;
-  span{
-    font-weight: 100;
-  }
 }
-
-button{
-  background:plum;
-  border: none;
-  padding: 10px;
-  font-size: 1.2em;
-  border-radius: 3px;
-  color: bisque;
-}
-
-input{
-  font-size: 1.2em;
-  border-radius: 3px;
-  padding: 10px;
-  background-color: aquamarine;
-  border: none;
-  flex: 1;
-  margin-right: 10px;
-}
-.input-wrapper{
-  width: 100%;
-  max-width: 400px;
-  display: flex;
-}
-
-ul{
-  padding: 0;
-  list-style: none;
-  width: 100%;
-  max-width: 400px;
-  margin-top: 3em;
-  li{
-    border-bottom: 1px solid #f5f5f5;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-    padding-bottom: 10px;
-    h3{
-      margin: 0;
-      font-weight: 100;
-      font-size: 1.5em;
-    }
-  }
-}
-
-
-/*# sourceMappingURL=style.css.map */
-/*# sourceMappingURL=style.css.map */
-
-/*# sourceMappingURL=style.scss.map */
