@@ -7,6 +7,7 @@ async function getStudents() {
  let res = await fetch('../assets/students.json')
  students = await res.json();
  generateKeyboard(students);
+ addEventListnerOnkeyboard();
 }
 
 function generateKeyboard(students) {
@@ -15,9 +16,9 @@ function generateKeyboard(students) {
   keyboard.innerHTML += `
    <button style="background-image:url(${
      students[i].img ? students[i].img : tempImage
-   })" id="key-${students[i].key}" class="keyboard__key keyboard">${
+   })" data-key="${students[i].key}" id="key-${
     students[i].key
-  }</button>
+  }" class="keyboard__key keyboard">${students[i].key}</button>
    `;
  }
 
@@ -49,15 +50,27 @@ function diplayStudent(student) {
 
 function addEventListnerOnkeyboard() {
  window.addEventListener("keydown", function (event) {
-   if (event.key !== undefined) {
-    let activeStudent = findStudentFormKey(event.key);
-    diplayStudent(activeStudent);
-     // Handle the event with KeyboardEvent.key
-   } else if (event.which !== undefined) {
-     // Handle the event with KeyboardEvent.which
+  if (event.key !== undefined) {
+   console.log(event.code);
+   if (event.code === "Space") {
+     window.location.href = "mailto:hello@hyperisland.com?subject=GameConf"
+   } else {
+     let activeStudent = findStudentFormKey(event.key);
+     diplayStudent(activeStudent);
    }
+   // Handle the event with KeyboardEvent.key
+  } else if (event.which !== undefined) {
+   // Handle the event with KeyboardEvent.which
+  }
  });
+
+ var keys = document.querySelectorAll(".keyboard__key");
+ for (let i = 0; i < keys.length; i++) {
+  keys[i].addEventListener("click", function (event) {
+    let student = findStudentFormKey(event.target.getAttribute('data-key'));
+    diplayStudent(student);
+  });
+ }
 }
 
-addEventListnerOnkeyboard();
 getStudents();
