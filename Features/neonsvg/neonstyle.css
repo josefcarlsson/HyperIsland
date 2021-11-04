@@ -10,7 +10,7 @@ section {
   text-align: center;
 }
 
-/* Blue neon */
+/* Blue neon, class .neonlight--blue works when placed on the <svg> element only. */
 .neonlight--blue {
   -webkit-filter: drop-shadow(0 0 3px #58d9ff);
   filter: drop-shadow(0 0 3px #58d9ff);
@@ -26,7 +26,7 @@ section {
   stroke: #58d9ff;
 }
 
-/* Pink neon */
+/* Pink neon, class .neonlight--pink works when placed on the <svg> element only. */
 .neonlight--pink {
   -webkit-filter: drop-shadow(0 0 3px #FF93FF);
   filter: drop-shadow(0 0 3px #FF93FF);
@@ -42,7 +42,7 @@ section {
   stroke: #FF38D5;
 }
 
-/* Yellow neon */
+/* Yellow neon, class .neonlight--yellow works when placed on the <svg> element only. */
 .neonlight--yellow {
   -webkit-filter: drop-shadow(0 0 3px #FFFF8C);
   filter: drop-shadow(0 0 3px #FFFF8C);
@@ -58,7 +58,7 @@ section {
   stroke: #FFC828;
 }
 
-/* Light blue neon with blue shadow */
+/* Light blue neon with blue shadow, class .neonlight--darkblue works when placed on the <svg> element only. */
 .neonlight--darkblue {
   -webkit-filter: drop-shadow(0 0 3px #2944E6);
   filter: drop-shadow(0 0 3px #2944E6);
