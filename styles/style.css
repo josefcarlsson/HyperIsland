@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=VT323&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=VT323&display=swap");
 @font-face {
   font-family: "circular-pro";
   src: url("../assets/fonts/circular-pro-bold.woff2") format("woff2");
@@ -161,7 +160,6 @@
   background-color: orange;
 }
 
-/* #39ff14; */
 /* font-family: 'Share Tech Mono', monospace;
 font-family: 'VT323', monospace; */
 .signup {
@@ -178,7 +176,7 @@ font-family: 'VT323', monospace; */
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-family: "Share Tech Mono", monospace;
+  font-family: 'VT323', monospace;
 }
 
 .signup__top-box {
@@ -188,6 +186,19 @@ font-family: 'VT323', monospace; */
           box-shadow: 0 0 7px #fff, 0 0 7px #fff, 0 0 7px #fff, 0 0 7px #4666ff, 0 0 82px #4666ff, 0 0 20px #4666ff, 0 0 30px #4666ff, 0 0 40px #4666ff, inset 0 0 50px #4666ff;
   margin: 10px;
   border-radius: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .signup__top-box > p {
@@ -237,11 +248,30 @@ font-family: 'VT323', monospace; */
           align-items: center;
 }
 
+.signup__middle-box-inner > form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.signup__middle-box-inner > form > input {
+  margin-bottom: 10px;
+  border-radius: 1rem;
+}
+
 .neonText {
   color: #fff;
   text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa, 0 0 82px #0fa, 0 0 92px #0fa, 0 0 30px #f72119, 0 0 40px #f72119;
-  text-align: center;
-  margin: 15px;
 }
 
 .signup__controller-container {
@@ -309,7 +339,17 @@ font-family: 'VT323', monospace; */
           transform: translate(-20%, -200%);
 }
 
-body, html {
+.neon-button {
+  margin: 1rem;
+  border: 0;
+  -webkit-box-shadow: 0 0 7px #fff, 0 0 7px #fff, 0 0 7px #fff, 0 0 7px #4666ff, 0 0 8px #4666ff, 0 0 10px #4666ff, 0 0 10px #4666ff, 0 0 10px #4666ff;
+          box-shadow: 0 0 7px #fff, 0 0 7px #fff, 0 0 7px #fff, 0 0 7px #4666ff, 0 0 8px #4666ff, 0 0 10px #4666ff, 0 0 10px #4666ff, 0 0 10px #4666ff;
+  padding: 0.5rem;
+  border-radius: 10%;
+}
+
+body,
+html {
   height: 100%;
   margin: 0;
   font-family: "circular-pro";

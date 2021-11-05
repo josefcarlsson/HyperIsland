@@ -1,14 +1,21 @@
-@import 'variables.scss', 'fonts.scss', 'helpclasses.scss', 'keyboard.scss', 'signup.scss';
+@import "variables.scss", "fonts.scss", "helpclasses.scss", "keyboard.scss",
+  "signup.scss";
 @import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=VT323&display=swap");
 
-body, html {
+body,
+html {
   height: 100%;
   margin: 0;
-  font-family: $font-family; 
+  font-family: $font-family;
   color: $primary-color;
   font-size: 16px;
-  background: rgb(0,0,43);
-  background: linear-gradient(180deg, rgba(0,0,43,1) 0%, rgba(72,9,142,1) 54%, rgba(17,18,36,1) 100%);
+  background: rgb(0, 0, 43);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 43, 1) 0%,
+    rgba(72, 9, 142, 1) 54%,
+    rgba(17, 18, 36, 1) 100%
+  );
 }
 
 body {
