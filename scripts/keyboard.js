@@ -10,6 +10,8 @@ async function getStudents() {
  addEventListnerOnkeyboard();
 }
 
+window.addEventListener("resize", createSVG);
+
 function generateKeyboard(students) {
  let keyboard = document.querySelector(".keyboard");
  for (let i = 0; i < students.length; i++) {
@@ -79,13 +81,23 @@ function drawLine(key, toEl) {
   document.getElementById("dotted-path").setAttribute("d", d);
 }
 
+function getDeadKey(code) {
+ switch (code) {
+  case 'Equal':
+   return '´'
+  case 'BracketRight':
+   return "¨";
+ }
+}
+
 function addEventListnerOnkeyboard() {
  window.addEventListener("keydown", function (event) {
   if (event.key !== undefined) {
    if (event.code === "Space") {
      window.location.href = "mailto:hello@hyperisland.com?subject=GameConf"
    } else {
-     let activeStudent = findStudentFormKey(event.key);
+     let key = (event.key === 'Dead') ? getDeadKey(event.code) : event.key;
+     let activeStudent = findStudentFormKey(key);
      diplayStudent(activeStudent);
    }
    // Handle the event with KeyboardEvent.key
