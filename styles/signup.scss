@@ -1,0 +1,121 @@
+/* font-family: 'Share Tech Mono', monospace;
+font-family: 'VT323', monospace; */
+
+.signup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Share Tech Mono", monospace;
+}
+
+.signup__top-box {
+  height: 4rem;
+  width: 20rem;
+  box-shadow: 0 0 7px #fff, 0 0 7px #fff, 0 0 7px #fff, 0 0 7px #4666ff,
+    0 0 82px #4666ff, 0 0 20px #4666ff, 0 0 30px #4666ff, 0 0 40px #4666ff,
+    inset 0 0 50px #4666ff;
+  margin: 10px;
+  border-radius: 0.5rem;
+}
+
+.signup__top-box > p {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.signup__middle-box-outer {
+  box-shadow: 0 0 7px #fff, 0 0 7px #fff, 0 0 7px #fff, 0 0 7px #4666ff,
+    0 0 82px #4666ff, 0 0 20px #4666ff, 0 0 30px #4666ff, 0 0 40px #4666ff,
+    inset 0 0 50px #4666ff;
+  border-radius: 0.5rem;
+}
+
+.signup__middle-box-outer {
+  height: 20rem;
+  width: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup__middle-box-inner {
+  height: 17rem;
+  width: 17rem;
+  box-shadow: 0 0 7px #fff, 0 0 7px #fff, 0 0 7px #fff, 0 0 7px #f72119,
+    0 0 82px #f72119, 0 0 20px #f72119, 0 0 30px #f72119, 0 0 40px #f72119,
+    inset 0 0 50px #f72119;
+  border-radius: 1rem;
+  color: #0fa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.neonText {
+  color: #fff;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa,
+    0 0 82px #0fa, 0 0 92px #0fa, 0 0 30px #f72119, 0 0 40px #f72119;
+  text-align: center;
+  margin: 15px;
+}
+
+.signup__controller-container {
+  width: 23rem;
+  height: 10rem;
+  border-radius: 0.5rem;
+  transform: perspective(10px) rotateX(1deg);
+  box-shadow: 0 0 7px #fff, 0 0 7px #fff, 0 0 7px #fff, 0 0 7px #f72119,
+    0 0 82px #f72119, 0 0 20px #f72119, 0 0 30px #f72119, 0 0 40px #f72119,
+    inset 0 0 50px #f72119;
+  color: #0fa;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.red-button-top {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  box-shadow: 0 0 7px #fff, 0 0 7px #fff, 0 0 7px #fff, 0 0 7px #f72119,
+    0 0 82px #f72119, 0 0 20px #f72119, 0 0 30px #f72119, 0 0 40px #f72119,
+    inset 0 0 50px #f72119;
+}
+
+.green-button-top {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  box-shadow: 0 0 7px #fff, 0 0 7px #fff, 0 0 7px #fff, 0 0 7px #0fa,
+    0 0 82px #0fa, 0 0 20px #0fa, 0 0 30px #0fa, 0 0 40px #0fa,
+    inset 0 0 50px #0fa;
+}
+
+.controller-knob {
+  background-color: #f72119;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  box-shadow: 0 0 7px #fff, 0 0 7px #fff, 0 0 7px #fff, 0 0 7px #f72119,
+    0 0 82px #f72119, 0 0 20px #f72119, 0 0 30px #f72119, 0 0 40px #f72119,
+    inset 0 0 50px #f72119;
+}
+
+.controller-stick {
+  position: absolute;
+  height: 5rem;
+  width: 0.5rem;
+  box-shadow: 0 0 7px #fff, 0 0 7px #fff, 0 0 7px #fff, 0 0 7px #0fa,
+    0 0 82px #0fa, 0 0 20px #0fa, 0 0 30px #0fa, 0 0 40px #0fa,
+    inset 0 0 50px #0fa;
+  transform: translate(-200%, -60%) rotate(30deg);
+}
+
+.controller-knob {
+  position: absolute;
+  z-index: 1;
+  transform: translate(-20%, -200%);
+}
