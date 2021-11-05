@@ -202,8 +202,10 @@ font-family: 'VT323', monospace; */
 }
 
 .signup__top-box > p {
+  color: orange;
   text-align: center;
-  font-size: 2rem;
+  font-size: 3rem;
+  letter-spacing: 0.5rem;
 }
 
 .signup__middle-box-outer {
