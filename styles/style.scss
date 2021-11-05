@@ -6,6 +6,8 @@ body, html {
   font-family: $font-family; 
   color: $primary-color;
   font-size: 16px;
+  background: rgb(0,0,43);
+  background: linear-gradient(180deg, rgba(0,0,43,1) 0%, rgba(72,9,142,1) 54%, rgba(17,18,36,1) 100%);
 }
 
 body {
@@ -17,7 +19,6 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   flex-direction: column;
 }
 

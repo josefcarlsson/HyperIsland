@@ -11,7 +11,7 @@ async function getStudents() {
 }
 
 function generateKeyboard(students) {
- let keyboard = document.querySelector(".keyboard")
+ let keyboard = document.querySelector(".keyboard");
  for (let i = 0; i < students.length; i++) {
   keyboard.innerHTML += `
    <button style="background-image:url(${
@@ -25,6 +25,15 @@ function generateKeyboard(students) {
  keyboard.innerHTML += `
    <button class="keyboard__space keyboard">hello@hyperisland.com</button>
  `;
+
+ createSVG()
+}
+function createSVG() {
+ let wrapperCord = document.querySelector(".keyboard-wrapper").getBoundingClientRect();
+ let svg = document.getElementById("keyboard-lines");
+ svg.setAttribute("width", wrapperCord.width);
+ svg.setAttribute("height", wrapperCord.height);
+ svg.setAttribute("viewBox", `0 0 ${wrapperCord.width} ${wrapperCord.height}`);
 }
 
 function findStudentFormKey(key) {
@@ -32,12 +41,14 @@ function findStudentFormKey(key) {
 }
 
 function diplayStudent(student) {
- document.getElementById("active-student-information").innerHTML = `
+ wrapperRef = document.getElementById("active-student-information");
+ wrapperRef.innerHTML = `
   <div>
    ${student[0].name}
   </div>
  `;
- 
+
+ drawLine('key-'+student[0].key, wrapperRef)
  let prev = document.querySelector(".keyboard__key--pressed")
 
  if (prev) {
@@ -45,6 +56,27 @@ function diplayStudent(student) {
  }
 
  document.getElementById(`key-${student[0].key}`).classList.add('keyboard__key--pressed');
+}
+
+function drawLine(key, toEl) {
+ let svg = document.getElementById("keyboard-lines").getBoundingClientRect();
+ let wrapperCord = document.getElementById("active-student-information").getBoundingClientRect();
+ let currentEl = document.getElementById(key).getBoundingClientRect();
+ let from = {
+   x: currentEl.x + currentEl.width / 2,
+   y: currentEl.y - wrapperCord.y,
+ };
+ let to = { x: wrapperCord.x, y: wrapperCord.height / 2};
+ let H = currentEl.x + currentEl.width / 2 < wrapperCord.x ? wrapperCord.x : wrapperCord.x + wrapperCord.width;
+ let d = `M ${from.x}, ${from.y} L ${from.x}, ${wrapperCord.height}`;
+ 
+ if (
+   currentEl.x + currentEl.width / 2 < wrapperCord.x ||
+   currentEl.x + currentEl.width / 2 > wrapperCord.x + wrapperCord.width
+ ) {
+  d = `M ${from.x}, ${from.y} L ${from.x}, ${to.y} V ${to.y} H ${H}`;
+ }
+  document.getElementById("dotted-path").setAttribute("d", d);
 }
 
 function addEventListnerOnkeyboard() {
