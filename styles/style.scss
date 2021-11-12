@@ -1,0 +1,27 @@
+@import 'variables.scss', 'fonts.scss';
+
+/* Applies to the entire body of the HTML document (except where overridden by more specific
+selectors). */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: $font-family; 
+  color: $primary-color;
+  font-size: 16px;
+}
+
+img {
+  width: 100%;
+}
+
+p {
+
+}
+
+
+
+
+/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */
+
+/*# sourceMappingURL=style.scss.map */
